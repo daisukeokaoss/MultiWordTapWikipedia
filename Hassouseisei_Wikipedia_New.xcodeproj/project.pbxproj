@@ -14,6 +14,7 @@
 		7E9040C61F59092900B59C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E9040C41F59092900B59C6D /* LaunchScreen.storyboard */; };
 		7E9040D11F59092900B59C6D /* Hassouseisei_Wikipedia_NewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9040D01F59092900B59C6D /* Hassouseisei_Wikipedia_NewTests.swift */; };
 		7E9040DC1F59092900B59C6D /* Hassouseisei_Wikipedia_NewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9040DB1F59092900B59C6D /* Hassouseisei_Wikipedia_NewUITests.swift */; };
+		7E9040EA1F5909B900B59C6D /* GetWordArrayFromWikipedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9040E91F5909B900B59C6D /* GetWordArrayFromWikipedia.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		7E9040D71F59092900B59C6D /* Hassouseisei_Wikipedia_NewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Hassouseisei_Wikipedia_NewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E9040DB1F59092900B59C6D /* Hassouseisei_Wikipedia_NewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hassouseisei_Wikipedia_NewUITests.swift; sourceTree = "<group>"; };
 		7E9040DD1F59092900B59C6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E9040E91F5909B900B59C6D /* GetWordArrayFromWikipedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetWordArrayFromWikipedia.swift; path = ../GetWordArrayFromWikipedia.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				7E9040BB1F59092900B59C6D /* AppDelegate.swift */,
 				7E9040BD1F59092900B59C6D /* ViewController.swift */,
+				7E9040E91F5909B900B59C6D /* GetWordArrayFromWikipedia.swift */,
 				7E9040BF1F59092900B59C6D /* Main.storyboard */,
 				7E9040C21F59092900B59C6D /* Assets.xcassets */,
 				7E9040C41F59092900B59C6D /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E9040EA1F5909B900B59C6D /* GetWordArrayFromWikipedia.swift in Sources */,
 				7E9040BE1F59092900B59C6D /* ViewController.swift in Sources */,
 				7E9040BC1F59092900B59C6D /* AppDelegate.swift in Sources */,
 			);

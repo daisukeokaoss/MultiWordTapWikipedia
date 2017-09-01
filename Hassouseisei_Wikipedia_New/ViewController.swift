@@ -21,5 +21,10 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func getWord(_ sender: UIButton) {
+        var obj = GetWordArrayFromWikipedia();
+        var array = obj.getWordArrayFromStringJp(seedWord: "スカゼミ");
+        print(array)
+    }
 }
 
