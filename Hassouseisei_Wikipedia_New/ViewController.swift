@@ -22,9 +22,12 @@ class ViewController: UIViewController {
 
 
     @IBAction func getWord(_ sender: UIButton) {
-        var obj = GetWordArrayFromWikipedia();
+        /*var obj = GetWordArrayFromWikipedia();
         var array = obj.getWordArrayFromStringJp(seedWord: "スカゼミ");
-        print(array)
+        print(array)*/
+        
+        var obj = CollectSpecifiedWordIteration();
+        
     }
 }
 
