@@ -23,15 +23,10 @@ class GetWordArrayFromWikipedia: NSObject , XMLParserDelegate{
     {
         WordArray = []
         
-        
-        
         let url = NSURL(string: "https://ja.wikipedia.org/w/api.php?format=xml&action=query&prop=links&titles=" + seedWord.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)! + "&&pllimit=1000")
         self.endFlag = true
         let task = URLSession.shared.dataTask(with: url! as URL, completionHandler: {data, response, error in
-            // リソースの取得が終わると、ここに書いた処理が実行される
-            
             let parser : XMLParser = XMLParser(data: data!)
-            
             parser.delegate = self
             parser.parse()
             self.endFlag = false
