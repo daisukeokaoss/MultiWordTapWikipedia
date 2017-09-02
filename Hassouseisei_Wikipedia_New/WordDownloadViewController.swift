@@ -12,6 +12,9 @@ class WordDownloadViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.ProcessPlotTextView.isHidden = true
+        self.DownloadButton.isHidden = false
 
         // Do any additional setup after loading the view.
     }
@@ -31,5 +34,13 @@ class WordDownloadViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+   
+    @IBAction func DownLoadExecute(_ sender: Any) {
+        self.DownloadButton.isHidden = true
+        self.ProcessPlotTextView.isHidden = false
+    }
 
+    @IBOutlet weak var ProcessPlotTextView: UITextView!
+
+    @IBOutlet weak var DownloadButton: UIButton!
 }

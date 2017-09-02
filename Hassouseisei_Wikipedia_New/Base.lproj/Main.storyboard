@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="H5y-G4-cVi">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="UVk-ei-lYy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="w8z-Nb-sDZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -28,24 +28,57 @@
             </objects>
             <point key="canvasLocation" x="238" y="493"/>
         </scene>
-        <!--View Controller-->
+        <!--Word Download View Controller-->
         <scene sceneID="nlt-11-CLk">
             <objects>
-                <viewController id="WMj-Cj-9f3" sceneMemberID="viewController">
+                <viewController id="WMj-Cj-9f3" customClass="WordDownloadViewController" customModule="Hassouseisei_Wikipedia_New" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eW6-Gu-cpw"/>
                         <viewControllerLayoutGuide type="bottom" id="SHR-CL-b5o"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vRB-1d-aLr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8y-HT-3au">
+                                <rect key="frame" x="16" y="28" width="382" height="150"/>
+                                <color key="backgroundColor" red="0.23330900363201534" green="1" blue="0.059634091893983165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="LyW-Nr-fFR"/>
+                                </constraints>
+                                <state key="normal" title="ダウンロード"/>
+                                <connections>
+                                    <action selector="DownLoadExecute:" destination="WMj-Cj-9f3" eventType="touchUpInside" id="zhC-fG-ZmU"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JAN-8l-WzO">
+                                <rect key="frame" x="0.0" y="5" width="414" height="682"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JAN-8l-WzO" firstAttribute="top" secondItem="vRB-1d-aLr" secondAttribute="top" constant="5" id="41r-GM-uPK"/>
+                            <constraint firstItem="SHR-CL-b5o" firstAttribute="top" secondItem="JAN-8l-WzO" secondAttribute="bottom" id="8lZ-Uj-Sws"/>
+                            <constraint firstItem="JAN-8l-WzO" firstAttribute="leading" secondItem="vRB-1d-aLr" secondAttribute="leading" id="GY3-WM-PZs"/>
+                            <constraint firstItem="W8y-HT-3au" firstAttribute="leading" secondItem="vRB-1d-aLr" secondAttribute="leading" constant="16" id="cEm-kc-Io3"/>
+                            <constraint firstItem="W8y-HT-3au" firstAttribute="top" secondItem="eW6-Gu-cpw" secondAttribute="bottom" constant="8" id="dPi-Xf-JNC"/>
+                            <constraint firstAttribute="trailing" secondItem="JAN-8l-WzO" secondAttribute="trailing" id="vvU-Ix-Q5H"/>
+                            <constraint firstAttribute="trailing" secondItem="W8y-HT-3au" secondAttribute="trailing" constant="16" id="yIy-Bt-HoK"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="downloads" id="g3L-nT-yhg"/>
+                    <connections>
+                        <outlet property="DownloadButton" destination="W8y-HT-3au" id="p4C-nY-q3I"/>
+                        <outlet property="ProcessPlotTextView" destination="JAN-8l-WzO" id="81J-PY-snF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRT-KE-JOb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-457" y="917"/>
+            <point key="canvasLocation" x="-459.4202898550725" y="915.48913043478262"/>
         </scene>
         <!--Generate Word-->
         <scene sceneID="pbs-rA-jsY">
@@ -56,7 +89,7 @@
                         <viewControllerLayoutGuide type="bottom" id="8sc-DD-smf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="od7-hl-e2n">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
