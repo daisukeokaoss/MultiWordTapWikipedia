@@ -19,7 +19,7 @@ class WordDownloadViewController: UIViewController {
         
         self.ProcessPlotTextView.text = "hogehoge";
         
-        NotificationCenter.default.addObserver(self, selector: Selector("update:"), name: NSNotification.Name(rawValue: "wordFetchNotification"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.update), name: Notification.Name(rawValue: "wordFetchNotification"), object: nil)
 
         // Do any additional setup after loading the view.
     }
@@ -29,8 +29,8 @@ class WordDownloadViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func update(notification: NSNotification?) {
-        print("NSNotification")
+    func update(notification: Notification?) {
+        print("Notification")
         
         if let userInfo = notification!.userInfo {
             let result = userInfo["value"] as! String
@@ -81,6 +81,9 @@ class WordDownloadViewController: UIViewController {
         }
         
         self.CancelFlag = false
+        
+
+        
     }
     
     
@@ -103,7 +106,108 @@ class WordDownloadViewController: UIViewController {
     var CancelFlag = true
    
     @IBAction func DownLoadExecute(_ sender: Any) {
-        self.changeUserInterfaceStartProcessing()
+        var inputTextField: UITextField?
+        
+        let alertController: UIAlertController = UIAlertController(title: "単語", message: "キーワードを入力してください", preferredStyle: .alert)
+        
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
+            print("Pushed CANCEL")
+            self.changeUserInterfaceStopProcessing()
+        }
+        alertController.addAction(cancelAction)
+        
+        let logintAction: UIAlertAction = UIAlertAction(title: "収集", style: .default) { action -> Void in
+            self.CancelFlag = false
+            
+            self.changeUserInterfaceStartProcessing()
+            //ここに入力された値を入れる
+            self.ProcessPlotTextView.text = "";
+            self.ProcessPlotTextView.text.append("ワード収集を始めます\n")
+            let backgroundQueue = DispatchQueue.global(qos: .default)
+            
+            
+            
+            backgroundQueue.async(execute: {
+                // Backgroundで行いたい重い処理はここ
+                
+                let getWordArrayIterativeScript = CollectSpecifiedWordIteration()
+                
+                
+                let wordArray = getWordArrayIterativeScript.collectWordIteration(seedString: (inputTextField?.text)!, Count: 1000)
+                
+                
+                if(wordArray.count == 0){
+                    DispatchQueue.main.async(execute: {
+                        self.ProcessPlotTextView.text.append("\(wordArray)")
+                        
+                        print(wordArray)
+                        
+                        
+                        
+                        let alertController: UIAlertController = UIAlertController(title: "確認", message: "ワードが収集できませんでした", preferredStyle: .alert)
+                        
+                        let logintAction: UIAlertAction = UIAlertAction(title: "OK", style: .default) { action -> Void in
+                            //self.RegisterWordArray(wordArray, seedWord: (inputTextField?.text)!)
+                        }
+                        
+                        
+                        alertController.addAction(logintAction)
+                        
+                        
+                        
+                        
+                        self.present(alertController, animated: true, completion: nil)
+                        
+                        
+                        self.changeUserInterfaceStopProcessing()
+                        
+                        self.CancelFlag = true
+                        
+                    })
+                    
+                }
+                
+                
+                DispatchQueue.main.async(execute: {
+                    self.ProcessPlotTextView.text.append("\(wordArray)")
+                    
+                    print(wordArray)
+                    
+                    
+                    
+                    let alertController: UIAlertController = UIAlertController(title: "確認", message: "ワードライブラリに加えますか？", preferredStyle: .alert)
+                    
+                    let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
+                        self.changeUserInterfaceStopProcessing()
+                    }
+                    
+                    let logintAction: UIAlertAction = UIAlertAction(title: "OK", style: .default) { action -> Void in
+                        //self.RegisterWordArray(wordArray, seedWord: (inputTextField?.text)!)
+                        //ここで、単語セットをワードセットに登録する
+                        self.changeUserInterfaceStopProcessing()
+                    }
+                    alertController.addAction(cancelAction)
+                    
+                    alertController.addAction(logintAction)
+                    
+                    self.present(alertController, animated: true, completion:nil)
+                    
+                    
+                })
+            })
+        }
+        
+        alertController.addAction(logintAction)
+        
+        alertController.addTextField { textField -> Void in
+            inputTextField = textField
+            textField.placeholder = "キーワード"
+        }
+        
+        
+        present(alertController, animated: true, completion: {()
+            //
+        })
     }
 
     @IBOutlet weak var ProcessStopButton: UIButton!

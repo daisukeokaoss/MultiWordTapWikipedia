@@ -14,10 +14,10 @@ class CollectSpecifiedWordIteration: NSObject {
     
     override init() {
         super.init()
-        NotificationCenter.default.addObserver(self, selector: Selector(("CancelProcess:")), name: NSNotification.Name(rawValue: "killProcess"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.CancelProcess(notification:)), name: Notification.Name(rawValue: "killProcess"), object: nil)
     }
     
-    func CancelProcess(notification: NSNotification?){
+    func CancelProcess(notification: Notification?){
         self.StopFlag = 1
     }
     
@@ -47,7 +47,8 @@ class CollectSpecifiedWordIteration: NSObject {
         
         var pointer:Int = 0
         
-        for i in 0..<wordArray.count{
+        var i = 0;
+        while(i < wordArray.count){
             if (self.internalRegexp.firstMatch ( in: wordArray[i], options: [], range:NSMakeRange(0, wordArray[i].characters.count) ) != nil){
                 wordArray.remove(at: i)
             }else if (self.internalRegexp2.firstMatch ( in: wordArray[i], options: [], range:NSMakeRange(0, wordArray[i].characters.count) ) != nil){
@@ -55,7 +56,10 @@ class CollectSpecifiedWordIteration: NSObject {
             }else if (self.internalRegexp3.firstMatch ( in: wordArray[i], options: [], range:NSMakeRange(0, wordArray[i].characters.count) ) != nil){
                 wordArray.remove(at: i)
             }
+            i += 1;
         }
+        
+
         
         var wordSet = Set(wordArray)
         
@@ -88,15 +92,16 @@ class CollectSpecifiedWordIteration: NSObject {
                 // 処理が終わった後UIスレッドでやりたいことはここ
                 //print("aaaaa")
                 
-                let n : NSNotification = NSNotification(name: NSNotification.Name(rawValue: "wordFetchNotification"), object: self, userInfo: ["value": PointerString,"CurrentWordCount":wordSet.count])
+                let n : Notification = Notification(name: Notification.Name(rawValue: "wordFetchNotification"), object: self, userInfo: ["value": PointerString,"CurrentWordCount":wordSet.count])
                 //通知を送る
-                NotificationCenter.default.post(n as Notification)
+                NotificationCenter.default.post(n)
                 
             })
             
             wordArray += getWordArrayFrom.getWordArrayFromStringJp(seedWord: PointerString)
             
-            for i in 0..<wordArray.count{
+            var i = 0;
+            while(i < wordArray.count){
                 if (self.internalRegexp.firstMatch ( in: wordArray[i], options: [], range:NSMakeRange(0, wordArray[i].characters.count) ) != nil){
                     wordArray.remove(at: i)
                 }else if (self.internalRegexp2.firstMatch ( in: wordArray[i], options: [], range:NSMakeRange(0, wordArray[i].characters.count) ) != nil){
@@ -104,6 +109,7 @@ class CollectSpecifiedWordIteration: NSObject {
                 }else if (self.internalRegexp3.firstMatch ( in: wordArray[i], options: [], range:NSMakeRange(0, wordArray[i].characters.count) ) != nil){
                     wordArray.remove(at: i)
                 }
+                i += 1;
             }
             
             wordArray.append(seedString)
