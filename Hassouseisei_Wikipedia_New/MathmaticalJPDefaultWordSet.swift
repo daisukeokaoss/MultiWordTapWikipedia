@@ -11,7 +11,7 @@ import UIKit
 class MathmaticalJPDefaultWordSet: NSObject {
     
     
-    func ReturnCaption() -> String{
+    static func ReturnCaption() -> String{
         return "数学用語"
     }
     

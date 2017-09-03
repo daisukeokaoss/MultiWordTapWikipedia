@@ -14,11 +14,33 @@ class FullSetWordStorageAndSettingLoadSave: NSObject {
     
     func loadDefaultWordSet()
     {
-        let appdelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        //let appdelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         
         let MathWord = OneSetWordStorage()
         
-        MathWord.CaptionString = "数学"
+        MathWord.CaptionString = MathmaticalJPDefaultWordSet.ReturnCaption()
+        MathWord.Enable = true
+        MathWord.wordSetArray = MathmaticalJPDefaultWordSet.ReturnWordArray()
+        
+        let ChemicalWord = OneSetWordStorage()
+        ChemicalWord.CaptionString = ChemicalJPDefaultWord.ReturnCaption()
+        ChemicalWord.Enable = true
+        ChemicalWord.wordSetArray = ChemicalJPDefaultWord.ReturnWordArray()
+        
+        let BungakuWord = OneSetWordStorage()
+        BungakuWord.CaptionString = BungakuJPDefaultWord.ReturnCaption()
+        BungakuWord.Enable = true
+        BungakuWord.wordSetArray = BungakuJPDefaultWord.ReturnWordArray()
+        
+        
+    }
+    
+    func loadDefaultSetting()
+    {
+        let appdelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appdelegate
+        
     }
 
     

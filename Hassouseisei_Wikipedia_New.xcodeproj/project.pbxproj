@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7E9040BC1F59092900B59C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9040BB1F59092900B59C6D /* AppDelegate.swift */; };
-		7E9040BE1F59092900B59C6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9040BD1F59092900B59C6D /* ViewController.swift */; };
 		7E9040C11F59092900B59C6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E9040BF1F59092900B59C6D /* Main.storyboard */; };
 		7E9040C31F59092900B59C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E9040C21F59092900B59C6D /* Assets.xcassets */; };
 		7E9040C61F59092900B59C6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E9040C41F59092900B59C6D /* LaunchScreen.storyboard */; };
@@ -48,7 +47,6 @@
 /* Begin PBXFileReference section */
 		7E9040B81F59092900B59C6D /* Hassouseisei_Wikipedia_New.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hassouseisei_Wikipedia_New.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E9040BB1F59092900B59C6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7E9040BD1F59092900B59C6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7E9040C01F59092900B59C6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E9040C21F59092900B59C6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E9040C51F59092900B59C6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 				7E9040FB1F5C1F6400B59C6D /* MathmaticalJPDefaultWordSet.swift */,
 				7E9040FC1F5C1F6400B59C6D /* BungakuJPDefaultWord.swift */,
 				7E9040FD1F5C1F6400B59C6D /* ChemicalJPDefaultWord.swift */,
-				7E9040BD1F59092900B59C6D /* ViewController.swift */,
 				7E9040EB1F5962ED00B59C6D /* CollectSpecifiedWordIteration.swift */,
 				7E9040E91F5909B900B59C6D /* GetWordArrayFromWikipedia.swift */,
 				7E9040BF1F59092900B59C6D /* Main.storyboard */,
@@ -305,7 +302,6 @@
 				7E9040FE1F5C1F6400B59C6D /* MathmaticalJPDefaultWordSet.swift in Sources */,
 				7E9040FF1F5C1F6400B59C6D /* BungakuJPDefaultWord.swift in Sources */,
 				7E9040EA1F5909B900B59C6D /* GetWordArrayFromWikipedia.swift in Sources */,
-				7E9040BE1F59092900B59C6D /* ViewController.swift in Sources */,
 				7E9040BC1F59092900B59C6D /* AppDelegate.swift in Sources */,
 				7E9040F61F59736100B59C6D /* WordDownloadViewController.swift in Sources */,
 				7E9040EC1F5962ED00B59C6D /* CollectSpecifiedWordIteration.swift in Sources */,
