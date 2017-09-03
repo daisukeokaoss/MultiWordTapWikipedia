@@ -13,8 +13,12 @@ class WordDownloadViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.ProcessPlotTextView.isHidden = true
-        self.DownloadButton.isHidden = false
+        self.ProcessPlotTextView.isHidden = true;
+        self.DownloadButton.isHidden = false;
+        
+        self.ProcessPlotTextView.text = "";
+        
+        NotificationCenter.default.addObserver(self, selector: Selector("update:"), name: NSNotification.Name(rawValue: "wordFetchNotification"), object: nil)
 
         // Do any additional setup after loading the view.
     }
@@ -22,6 +26,19 @@ class WordDownloadViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func update(notification: NSNotification?) {
+        print("NSNotification")
+        
+        if let userInfo = notification!.userInfo {
+            let result = userInfo["value"] as! String
+            let count = userInfo["CurrentWordCount"] as! Int
+            print("受信した数値：\(result)")
+            
+            ProcessPlotTextView.text.append(String("「\(result)」の関連ワードを取得しました\n"))
+            ProcessPlotTextView.text.append(String("\(count)個のワードを取得しました\n"))
+        }
     }
     
 

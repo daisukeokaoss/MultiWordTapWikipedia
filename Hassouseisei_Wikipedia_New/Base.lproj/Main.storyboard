@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -40,34 +41,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JAN-8l-WzO">
+                                <rect key="frame" x="0.0" y="75" width="414" height="612"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGG-GV-63D">
+                                <rect key="frame" x="70" y="5" width="274" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.12821855610961386" blue="0.058401566209311362" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aJ7-YP-xuE"/>
+                                </constraints>
+                                <state key="normal" title="Stop Process"/>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8y-HT-3au">
-                                <rect key="frame" x="16" y="28" width="382" height="150"/>
+                                <rect key="frame" x="12" y="28" width="390" height="155"/>
                                 <color key="backgroundColor" red="0.23330900363201534" green="1" blue="0.059634091893983165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="LyW-Nr-fFR"/>
+                                    <constraint firstAttribute="height" constant="155" id="lPt-qZ-XiM"/>
                                 </constraints>
                                 <state key="normal" title="ダウンロード"/>
                                 <connections>
                                     <action selector="DownLoadExecute:" destination="WMj-Cj-9f3" eventType="touchUpInside" id="zhC-fG-ZmU"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JAN-8l-WzO">
-                                <rect key="frame" x="0.0" y="5" width="414" height="682"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JAN-8l-WzO" firstAttribute="top" secondItem="vRB-1d-aLr" secondAttribute="top" constant="5" id="41r-GM-uPK"/>
-                            <constraint firstItem="SHR-CL-b5o" firstAttribute="top" secondItem="JAN-8l-WzO" secondAttribute="bottom" id="8lZ-Uj-Sws"/>
-                            <constraint firstItem="JAN-8l-WzO" firstAttribute="leading" secondItem="vRB-1d-aLr" secondAttribute="leading" id="GY3-WM-PZs"/>
-                            <constraint firstItem="W8y-HT-3au" firstAttribute="leading" secondItem="vRB-1d-aLr" secondAttribute="leading" constant="16" id="cEm-kc-Io3"/>
-                            <constraint firstItem="W8y-HT-3au" firstAttribute="top" secondItem="eW6-Gu-cpw" secondAttribute="bottom" constant="8" id="dPi-Xf-JNC"/>
-                            <constraint firstAttribute="trailing" secondItem="JAN-8l-WzO" secondAttribute="trailing" id="vvU-Ix-Q5H"/>
-                            <constraint firstAttribute="trailing" secondItem="W8y-HT-3au" secondAttribute="trailing" constant="16" id="yIy-Bt-HoK"/>
+                            <constraint firstItem="lGG-GV-63D" firstAttribute="top" secondItem="vRB-1d-aLr" secondAttribute="topMargin" constant="5" id="21F-xd-1Cl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lGG-GV-63D" secondAttribute="trailing" constant="50" id="2Ht-QH-dkb"/>
+                            <constraint firstItem="JAN-8l-WzO" firstAttribute="leading" secondItem="vRB-1d-aLr" secondAttribute="leading" id="8Ig-fd-Q9y"/>
+                            <constraint firstItem="SHR-CL-b5o" firstAttribute="top" secondItem="JAN-8l-WzO" secondAttribute="bottom" id="AEq-mn-slV"/>
+                            <constraint firstItem="lGG-GV-63D" firstAttribute="leading" secondItem="vRB-1d-aLr" secondAttribute="leadingMargin" constant="50" id="T2D-Zb-cGZ"/>
+                            <constraint firstAttribute="trailing" secondItem="JAN-8l-WzO" secondAttribute="trailing" id="k9l-Z2-7hQ"/>
+                            <constraint firstItem="W8y-HT-3au" firstAttribute="top" secondItem="eW6-Gu-cpw" secondAttribute="bottom" constant="8" id="vnb-gE-Qym"/>
+                            <constraint firstItem="W8y-HT-3au" firstAttribute="leading" secondItem="vRB-1d-aLr" secondAttribute="leading" constant="12" id="wfi-WP-eEb"/>
+                            <constraint firstAttribute="trailing" secondItem="W8y-HT-3au" secondAttribute="trailing" constant="12" id="zGY-Io-Puu"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="downloads" id="g3L-nT-yhg"/>
