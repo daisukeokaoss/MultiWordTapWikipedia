@@ -55,6 +55,7 @@ class WordCollectionTableViewController: UITableViewController {
             cell.EnableDisableSwitch.isOn = appdelegate.setOfWordArray[indexPath.row-1].Enable
             cell.wordSetSelectionLabel.text = appdelegate.setOfWordArray[indexPath.row-1].CaptionString
             cell.IdentityNo = indexPath.row - 1
+            return cell
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "wordCollectionCell", for: indexPath)
         return cell
@@ -68,6 +69,7 @@ class WordCollectionTableViewController: UITableViewController {
             appdelegate.setOfWordArray.remove(at: indexPath.row - 1)
             tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
         }
+        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
