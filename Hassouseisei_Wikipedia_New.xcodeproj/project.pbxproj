@@ -21,6 +21,8 @@
 		7E9040F31F596B8800B59C6D /* 09-chat-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E9040EF1F596B8800B59C6D /* 09-chat-2.png */; };
 		7E9040F41F596B8800B59C6D /* 09-chat-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E9040F01F596B8800B59C6D /* 09-chat-2@2x.png */; };
 		7E9040F61F59736100B59C6D /* WordDownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9040F51F59736100B59C6D /* WordDownloadViewController.swift */; };
+		7E9040F81F5C1E0400B59C6D /* FullSetWordStorageAndSettingLoadSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9040F71F5C1E0400B59C6D /* FullSetWordStorageAndSettingLoadSave.swift */; };
+		7E9040FA1F5C1E3F00B59C6D /* OneSetWordStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9040F91F5C1E3F00B59C6D /* OneSetWordStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		7E9040EF1F596B8800B59C6D /* 09-chat-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "09-chat-2.png"; sourceTree = "<group>"; };
 		7E9040F01F596B8800B59C6D /* 09-chat-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "09-chat-2@2x.png"; sourceTree = "<group>"; };
 		7E9040F51F59736100B59C6D /* WordDownloadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordDownloadViewController.swift; sourceTree = "<group>"; };
+		7E9040F71F5C1E0400B59C6D /* FullSetWordStorageAndSettingLoadSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullSetWordStorageAndSettingLoadSave.swift; sourceTree = "<group>"; };
+		7E9040F91F5C1E3F00B59C6D /* OneSetWordStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneSetWordStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 				7E9040EB1F5962ED00B59C6D /* CollectSpecifiedWordIteration.swift */,
 				7E9040E91F5909B900B59C6D /* GetWordArrayFromWikipedia.swift */,
 				7E9040BF1F59092900B59C6D /* Main.storyboard */,
+				7E9040F71F5C1E0400B59C6D /* FullSetWordStorageAndSettingLoadSave.swift */,
+				7E9040F91F5C1E3F00B59C6D /* OneSetWordStorage.swift */,
 				7E9040F51F59736100B59C6D /* WordDownloadViewController.swift */,
 				7E9040C21F59092900B59C6D /* Assets.xcassets */,
 				7E9040C41F59092900B59C6D /* LaunchScreen.storyboard */,
@@ -292,6 +298,8 @@
 				7E9040BC1F59092900B59C6D /* AppDelegate.swift in Sources */,
 				7E9040F61F59736100B59C6D /* WordDownloadViewController.swift in Sources */,
 				7E9040EC1F5962ED00B59C6D /* CollectSpecifiedWordIteration.swift in Sources */,
+				7E9040F81F5C1E0400B59C6D /* FullSetWordStorageAndSettingLoadSave.swift in Sources */,
+				7E9040FA1F5C1E3F00B59C6D /* OneSetWordStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

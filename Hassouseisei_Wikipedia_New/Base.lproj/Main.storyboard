@@ -21,13 +21,35 @@
                     <view key="view" contentMode="scaleToFill" id="w8z-Nb-sDZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rvu-pG-u8n">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="64" id="iAS-Jk-g8d">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iAS-Jk-g8d" id="FPc-J4-5ES">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="63.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rvu-pG-u8n" firstAttribute="leading" secondItem="w8z-Nb-sDZ" secondAttribute="leading" id="0cl-0z-H6f"/>
+                            <constraint firstItem="Rvu-pG-u8n" firstAttribute="top" secondItem="w8z-Nb-sDZ" secondAttribute="top" id="D26-4Q-Uk5"/>
+                            <constraint firstItem="UVk-ei-lYy" firstAttribute="top" secondItem="Rvu-pG-u8n" secondAttribute="bottom" id="QLJ-1l-Rms"/>
+                            <constraint firstAttribute="trailing" secondItem="Rvu-pG-u8n" secondAttribute="trailing" id="yk1-lN-qmZ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Word Store" image="15-tags.png" selectedImage="15-tags.png" id="ELz-Fh-Y5m"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAH-z4-p9M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="238" y="493"/>
+            <point key="canvasLocation" x="237.68115942028987" y="492.39130434782612"/>
         </scene>
         <!--Word Download View Controller-->
         <scene sceneID="nlt-11-CLk">
