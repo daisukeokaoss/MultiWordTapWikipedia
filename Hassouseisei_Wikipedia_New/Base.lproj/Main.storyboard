@@ -41,7 +41,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JAN-8l-WzO">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JAN-8l-WzO">
                                 <rect key="frame" x="0.0" y="75" width="414" height="612"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -55,6 +55,9 @@
                                     <constraint firstAttribute="height" constant="50" id="aJ7-YP-xuE"/>
                                 </constraints>
                                 <state key="normal" title="Stop Process"/>
+                                <connections>
+                                    <action selector="StopProcessExecute:" destination="WMj-Cj-9f3" eventType="touchUpInside" id="GY3-Ej-Y5f"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8y-HT-3au">
                                 <rect key="frame" x="12" y="28" width="390" height="155"/>
@@ -72,10 +75,11 @@
                         <constraints>
                             <constraint firstItem="lGG-GV-63D" firstAttribute="top" secondItem="vRB-1d-aLr" secondAttribute="topMargin" constant="5" id="21F-xd-1Cl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lGG-GV-63D" secondAttribute="trailing" constant="50" id="2Ht-QH-dkb"/>
-                            <constraint firstItem="JAN-8l-WzO" firstAttribute="leading" secondItem="vRB-1d-aLr" secondAttribute="leading" id="8Ig-fd-Q9y"/>
-                            <constraint firstItem="SHR-CL-b5o" firstAttribute="top" secondItem="JAN-8l-WzO" secondAttribute="bottom" id="AEq-mn-slV"/>
+                            <constraint firstAttribute="trailing" secondItem="JAN-8l-WzO" secondAttribute="trailing" id="KUZ-wb-xiy"/>
+                            <constraint firstItem="SHR-CL-b5o" firstAttribute="top" secondItem="JAN-8l-WzO" secondAttribute="bottom" id="QvH-Q1-OES"/>
                             <constraint firstItem="lGG-GV-63D" firstAttribute="leading" secondItem="vRB-1d-aLr" secondAttribute="leadingMargin" constant="50" id="T2D-Zb-cGZ"/>
-                            <constraint firstAttribute="trailing" secondItem="JAN-8l-WzO" secondAttribute="trailing" id="k9l-Z2-7hQ"/>
+                            <constraint firstItem="JAN-8l-WzO" firstAttribute="leading" secondItem="vRB-1d-aLr" secondAttribute="leading" id="TPN-pn-10u"/>
+                            <constraint firstItem="JAN-8l-WzO" firstAttribute="top" secondItem="lGG-GV-63D" secondAttribute="bottom" constant="20" id="gw9-ks-TJh"/>
                             <constraint firstItem="W8y-HT-3au" firstAttribute="top" secondItem="eW6-Gu-cpw" secondAttribute="bottom" constant="8" id="vnb-gE-Qym"/>
                             <constraint firstItem="W8y-HT-3au" firstAttribute="leading" secondItem="vRB-1d-aLr" secondAttribute="leading" constant="12" id="wfi-WP-eEb"/>
                             <constraint firstAttribute="trailing" secondItem="W8y-HT-3au" secondAttribute="trailing" constant="12" id="zGY-Io-Puu"/>
@@ -85,6 +89,7 @@
                     <connections>
                         <outlet property="DownloadButton" destination="W8y-HT-3au" id="p4C-nY-q3I"/>
                         <outlet property="ProcessPlotTextView" destination="JAN-8l-WzO" id="81J-PY-snF"/>
+                        <outlet property="ProcessStopButton" destination="lGG-GV-63D" id="TLb-K4-Iqq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRT-KE-JOb" userLabel="First Responder" sceneMemberID="firstResponder"/>
