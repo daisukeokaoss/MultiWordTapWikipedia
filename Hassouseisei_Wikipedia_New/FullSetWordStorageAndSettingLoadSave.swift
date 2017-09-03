@@ -9,6 +9,17 @@
 import UIKit
 
 class FullSetWordStorageAndSettingLoadSave: NSObject {
+    
+    let defaults = UserDefaults.standard
+    
+    func loadDefaultWordSet()
+    {
+        let appdelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        let MathWord = OneSetWordStorage()
+        
+        MathWord.CaptionString = "数学"
+    }
 
     
 
