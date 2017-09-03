@@ -10,46 +10,66 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Word Store-->
-        <scene sceneID="Jgk-x6-NNS">
+        <!--WordCollection-->
+        <scene sceneID="huN-Ke-1PE">
             <objects>
-                <viewController id="0eo-2c-kzY" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Tnv-gn-qFA"/>
-                        <viewControllerLayoutGuide type="bottom" id="UVk-ei-lYy"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="w8z-Nb-sDZ">
+                <tableViewController id="pUq-Aq-J4N" customClass="WordCollectionTableViewController" customModule="Hassouseisei_Wikipedia_New" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3jb-0v-Lb6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rvu-pG-u8n">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="64" id="iAS-Jk-g8d">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="64"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iAS-Jk-g8d" id="FPc-J4-5ES">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="63.666666666666664"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Rvu-pG-u8n" firstAttribute="leading" secondItem="w8z-Nb-sDZ" secondAttribute="leading" id="0cl-0z-H6f"/>
-                            <constraint firstItem="Rvu-pG-u8n" firstAttribute="top" secondItem="w8z-Nb-sDZ" secondAttribute="top" id="D26-4Q-Uk5"/>
-                            <constraint firstItem="UVk-ei-lYy" firstAttribute="top" secondItem="Rvu-pG-u8n" secondAttribute="bottom" id="QLJ-1l-Rms"/>
-                            <constraint firstAttribute="trailing" secondItem="Rvu-pG-u8n" secondAttribute="trailing" id="yk1-lN-qmZ"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Word Store" image="15-tags.png" selectedImage="15-tags.png" id="ELz-Fh-Y5m"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eAH-z4-p9M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="wordCollectionCell" rowHeight="64" id="iAS-Jk-g8d" customClass="OneWordTableViewCell" customModule="Hassouseisei_Wikipedia_New" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="64"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iAS-Jk-g8d" id="FPc-J4-5ES">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="63.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBh-ne-qYB">
+                                            <rect key="frame" x="18" y="21" width="322" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XPc-qZ-8Ci">
+                                            <rect key="frame" x="348" y="16" width="51" height="31"/>
+                                            <connections>
+                                                <action selector="enabelDisableSwitchClick:" destination="iAS-Jk-g8d" eventType="valueChanged" id="3yM-1a-Xe1"/>
+                                                <action selector="enableDisableSwitchClickExecute:" destination="iAS-Jk-g8d" eventType="valueChanged" id="Ra6-EW-fCV"/>
+                                            </connections>
+                                        </switch>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="lBh-ne-qYB" firstAttribute="leading" secondItem="FPc-J4-5ES" secondAttribute="leadingMargin" constant="10" id="5gO-gY-fPO"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="XPc-qZ-8Ci" secondAttribute="trailing" constant="9" id="Tbj-78-Qif"/>
+                                        <constraint firstItem="XPc-qZ-8Ci" firstAttribute="leading" secondItem="lBh-ne-qYB" secondAttribute="trailing" constant="8" id="vHU-r0-UX9"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="EnableDisableSwitch" destination="XPc-qZ-8Ci" id="mho-df-983"/>
+                                    <outlet property="wordSetSelectionLabel" destination="lBh-ne-qYB" id="QUm-6z-MbW"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BlankCell" id="igN-xR-Sjp">
+                                <rect key="frame" x="0.0" y="92" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="BlankCell" tableViewCell="igN-xR-Sjp" id="eeT-a5-kEg">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pUq-Aq-J4N" id="mSq-Zm-GVE"/>
+                            <outlet property="delegate" destination="pUq-Aq-J4N" id="2sq-vb-nNo"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="WordCollection" image="15-tags.png" id="Qm4-Qy-uBD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RNU-cE-OhB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="237.68115942028987" y="492.39130434782612"/>
+            <point key="canvasLocation" x="852" y="518"/>
         </scene>
         <!--Word Download View Controller-->
         <scene sceneID="nlt-11-CLk">
@@ -148,7 +168,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="F5k-EN-ccT" kind="relationship" relationship="viewControllers" id="0sC-x4-ovI"/>
-                        <segue destination="0eo-2c-kzY" kind="relationship" relationship="viewControllers" id="QjF-SK-zga"/>
+                        <segue destination="pUq-Aq-J4N" kind="relationship" relationship="viewControllers" id="3oq-Z0-gNA"/>
                         <segue destination="WMj-Cj-9f3" kind="relationship" relationship="viewControllers" id="ddS-2R-Q4o"/>
                     </connections>
                 </tabBarController>

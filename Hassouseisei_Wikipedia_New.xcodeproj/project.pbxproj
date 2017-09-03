@@ -25,6 +25,8 @@
 		7E9040FE1F5C1F6400B59C6D /* MathmaticalJPDefaultWordSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9040FB1F5C1F6400B59C6D /* MathmaticalJPDefaultWordSet.swift */; };
 		7E9040FF1F5C1F6400B59C6D /* BungakuJPDefaultWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9040FC1F5C1F6400B59C6D /* BungakuJPDefaultWord.swift */; };
 		7E9041001F5C1F6400B59C6D /* ChemicalJPDefaultWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9040FD1F5C1F6400B59C6D /* ChemicalJPDefaultWord.swift */; };
+		7E9041021F5C379000B59C6D /* OneWordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9041011F5C379000B59C6D /* OneWordTableViewCell.swift */; };
+		7E9041041F5C3A5000B59C6D /* WordCollectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9041031F5C3A5000B59C6D /* WordCollectionTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		7E9040FB1F5C1F6400B59C6D /* MathmaticalJPDefaultWordSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathmaticalJPDefaultWordSet.swift; sourceTree = "<group>"; };
 		7E9040FC1F5C1F6400B59C6D /* BungakuJPDefaultWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BungakuJPDefaultWord.swift; sourceTree = "<group>"; };
 		7E9040FD1F5C1F6400B59C6D /* ChemicalJPDefaultWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChemicalJPDefaultWord.swift; sourceTree = "<group>"; };
+		7E9041011F5C379000B59C6D /* OneWordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneWordTableViewCell.swift; sourceTree = "<group>"; };
+		7E9041031F5C3A5000B59C6D /* WordCollectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordCollectionTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,8 @@
 				7E9040EB1F5962ED00B59C6D /* CollectSpecifiedWordIteration.swift */,
 				7E9040E91F5909B900B59C6D /* GetWordArrayFromWikipedia.swift */,
 				7E9040BF1F59092900B59C6D /* Main.storyboard */,
+				7E9041031F5C3A5000B59C6D /* WordCollectionTableViewController.swift */,
+				7E9041011F5C379000B59C6D /* OneWordTableViewCell.swift */,
 				7E9040F71F5C1E0400B59C6D /* FullSetWordStorageAndSettingLoadSave.swift */,
 				7E9040F91F5C1E3F00B59C6D /* OneSetWordStorage.swift */,
 				7E9040F51F59736100B59C6D /* WordDownloadViewController.swift */,
@@ -300,11 +306,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E9040FE1F5C1F6400B59C6D /* MathmaticalJPDefaultWordSet.swift in Sources */,
+				7E9041041F5C3A5000B59C6D /* WordCollectionTableViewController.swift in Sources */,
 				7E9040FF1F5C1F6400B59C6D /* BungakuJPDefaultWord.swift in Sources */,
 				7E9040EA1F5909B900B59C6D /* GetWordArrayFromWikipedia.swift in Sources */,
 				7E9040BC1F59092900B59C6D /* AppDelegate.swift in Sources */,
 				7E9040F61F59736100B59C6D /* WordDownloadViewController.swift in Sources */,
 				7E9040EC1F5962ED00B59C6D /* CollectSpecifiedWordIteration.swift in Sources */,
+				7E9041021F5C379000B59C6D /* OneWordTableViewCell.swift in Sources */,
 				7E9041001F5C1F6400B59C6D /* ChemicalJPDefaultWord.swift in Sources */,
 				7E9040F81F5C1E0400B59C6D /* FullSetWordStorageAndSettingLoadSave.swift in Sources */,
 				7E9040FA1F5C1E3F00B59C6D /* OneSetWordStorage.swift in Sources */,
