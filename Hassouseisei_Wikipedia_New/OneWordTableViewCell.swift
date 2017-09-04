@@ -15,11 +15,7 @@ class OneWordTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
-    }
     @IBAction func enableDisableSwitchClickExecute(_ sender: UISwitch) {
         let appdelegate = UIApplication.shared.delegate as! AppDelegate
         appdelegate.setOfWordArray[IdentityNo].Enable = sender.isOn

@@ -44,7 +44,7 @@ class FullSetWordStorageAndSettingLoadSave: NSObject {
         
         appdelegate.setOfWordArray = []
         
-        self.loadDefaultWordSet()
+        //self.loadDefaultWordSet()
         
         
         

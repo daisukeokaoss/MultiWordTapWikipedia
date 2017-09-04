@@ -182,8 +182,7 @@ class WordDownloadViewController: UIViewController {
                     }
                     
                     let logintAction: UIAlertAction = UIAlertAction(title: "OK", style: .default) { action -> Void in
-                        //self.RegisterWordArray(wordArray, seedWord: (inputTextField?.text)!)
-                        //ここで、単語セットをワードセットに登録する
+                        self.registerWordArray(wordSetArray: wordArray, seedWord:(inputTextField?.text)!)
                         self.changeUserInterfaceStopProcessing()
                     }
                     alertController.addAction(cancelAction)
@@ -208,6 +207,15 @@ class WordDownloadViewController: UIViewController {
         present(alertController, animated: true, completion: {()
             //
         })
+    }
+    
+    func registerWordArray(wordSetArray:Array<String>,seedWord:String){
+        let register = OneSetWordStorage()
+        register.CaptionString = seedWord
+        register.Enable = true
+        register.wordSetArray = wordSetArray
+        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        appdelegate.setOfWordArray.append(register)
     }
 
     @IBOutlet weak var ProcessStopButton: UIButton!

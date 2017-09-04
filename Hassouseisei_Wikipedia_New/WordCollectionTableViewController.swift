@@ -57,7 +57,7 @@ class WordCollectionTableViewController: UITableViewController {
             cell.IdentityNo = indexPath.row - 1
             return cell
         }
-        let cell = tableView.dequeueReusableCell(withIdentifier: "wordCollectionCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BlankCell", for: indexPath)
         return cell
     }
     
