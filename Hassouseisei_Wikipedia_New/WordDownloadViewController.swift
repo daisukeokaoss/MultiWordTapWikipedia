@@ -216,6 +216,7 @@ class WordDownloadViewController: UIViewController {
         register.wordSetArray = wordSetArray
         let appdelegate = UIApplication.shared.delegate as! AppDelegate
         appdelegate.setOfWordArray.append(register)
+        
     }
 
     @IBOutlet weak var ProcessStopButton: UIButton!

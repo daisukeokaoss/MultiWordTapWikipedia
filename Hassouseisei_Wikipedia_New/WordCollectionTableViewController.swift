@@ -25,10 +25,21 @@ class WordCollectionTableViewController: UITableViewController {
         appdelegate.setting.saveSetting()
     }
     
+    var MyTableView:UITableView?
+    
+    var firstLoadFlag = 0;
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let appdelegate = UIApplication.shared.delegate as! AppDelegate
-        appdelegate.setting.loadDefaultSetting()
+        if firstLoadFlag == 0{
+            appdelegate.setting.loadDefaultSetting()
+            firstLoadFlag = 1
+        }
+        
+        
+        self.MyTableView?.reloadData()
+        
         
         
     }
@@ -38,6 +49,7 @@ class WordCollectionTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        self.MyTableView = tableView
         let appdelegate = UIApplication.shared.delegate as! AppDelegate
         
         if(indexPath.row == 0){
