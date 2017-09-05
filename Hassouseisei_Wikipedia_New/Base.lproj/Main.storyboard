@@ -35,7 +35,6 @@
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XPc-qZ-8Ci">
                                             <rect key="frame" x="348" y="16" width="51" height="31"/>
                                             <connections>
-                                                <action selector="enabelDisableSwitchClick:" destination="iAS-Jk-g8d" eventType="valueChanged" id="3yM-1a-Xe1"/>
                                                 <action selector="enableDisableSwitchClickExecute:" destination="iAS-Jk-g8d" eventType="valueChanged" id="Ra6-EW-fCV"/>
                                             </connections>
                                         </switch>
