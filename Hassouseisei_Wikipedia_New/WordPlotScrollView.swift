@@ -9,7 +9,7 @@
 import UIKit
 
 
-extension Array {
+/*extension Array {
     
     mutating func shuffle() {
         for i in 0..<self.count {
@@ -25,7 +25,7 @@ extension Array {
         copied.shuffle()
         return copied
     }
-}
+}*/
 
 class WordPlotScrollView: UIScrollView {
 

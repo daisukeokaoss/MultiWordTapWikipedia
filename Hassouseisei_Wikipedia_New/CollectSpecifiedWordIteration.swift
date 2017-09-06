@@ -8,6 +8,25 @@
 
 import UIKit
 
+
+extension Array {
+    
+    mutating func shuffle() {
+        for i in 0..<self.count {
+            let j = Int(arc4random_uniform(UInt32(self.indices.last!)))
+            if i != j {
+                swap(&self[i], &self[j])
+            }
+        }
+    }
+    
+    var shuffled: Array {
+        var copied = Array<Element>(self)
+        copied.shuffle()
+        return copied
+    }
+}
+
 class CollectSpecifiedWordIteration: NSObject {
     
     var StopFlag = 0
@@ -26,7 +45,7 @@ class CollectSpecifiedWordIteration: NSObject {
     let internalRegexp3: NSRegularExpression = try! NSRegularExpression( pattern: "[０-９]", options: NSRegularExpression.Options.caseInsensitive)
     
     
-    func shuffle<T>( array: inout [T]) {
+   /* func shuffle<T>( array: inout [T]) {
         for j in ((0 + 1)...array.count - 1).reversed() {
             let k = Int(arc4random_uniform(UInt32(j + 1))) // 0 <= k <= j
             if k == j{
@@ -34,7 +53,7 @@ class CollectSpecifiedWordIteration: NSObject {
             }
             swap(&array[k], &array[j])
         }
-    }
+    }*/
     
     func collectWordIteration(seedString :String,Count:Int) -> Array<String>
     {
@@ -43,7 +62,13 @@ class CollectSpecifiedWordIteration: NSObject {
         
         wordArray = getWordArrayFrom.getWordArrayFromStringJp(seedWord: seedString);
         
-        shuffle(array: &wordArray);
+        if(wordArray.count == 0){
+            return []
+        }
+        
+        wordArray.shuffle()
+        wordArray = wordArray.shuffled
+        //shuffle(array: &wordArray);
         
         var pointer:Int = 0
         
