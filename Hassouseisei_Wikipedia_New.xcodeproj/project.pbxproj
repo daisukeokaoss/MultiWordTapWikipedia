@@ -487,6 +487,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "biz.nanosoftware.Hassouseisei-Wikipedia-New";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -500,6 +501,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "biz.nanosoftware.Hassouseisei-Wikipedia-New";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
