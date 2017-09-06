@@ -1,0 +1,116 @@
+//
+//  WordPlotScrollView.swift
+//  Hassouseisei_Wikipedia_New
+//
+//  Created by 岡大輔 on 2017/09/05.
+//  Copyright © 2017年 岡大輔. All rights reserved.
+//
+
+import UIKit
+
+class WordPlotScrollView: UIScrollView {
+
+    /*
+    // Only override draw() if you perform custom drawing.
+    // An empty implementation adversely affects performance during animation.
+    override func draw(_ rect: CGRect) {
+        // Drawing code
+    }
+    */
+    var generateButton:UIButton!
+    var Label1st:UILabel!
+    var Label2nd:UILabel!
+    var Label3rd:UILabel!
+    var Label4th:UILabel!
+    var Label5th:UILabel!
+    var Label6th:UILabel!
+    var Label7th:UILabel!
+    var Label8th:UILabel!
+    
+    
+    internal func drawUserInterface( height:CGFloat = UIScreen.main.bounds.size.height, width:CGFloat = UIScreen.main.bounds.size.width)
+    {
+        print("Drowed")
+        
+        let rowHeight = height/13
+        let xCoordinateOfStartingWord = width/24
+        
+        let labelHeight = CGFloat(30)
+        
+        let xLabel = xCoordinateOfStartingWord
+        
+        let labelWidth = xCoordinateOfStartingWord*22
+        
+        self.Label1st = UILabel(frame: CGRect(x: xLabel, y: rowHeight, width: labelWidth, height: labelHeight))
+        self.Label2nd = UILabel(frame: CGRect(x: xLabel, y: rowHeight*2, width: labelWidth, height: labelHeight))
+        self.Label3rd = UILabel(frame: CGRect(x: xLabel, y: rowHeight*3, width: labelWidth, height: labelHeight))
+        self.Label4th = UILabel(frame: CGRect(x: xLabel, y: rowHeight*4, width: labelWidth, height: labelHeight))
+        self.Label5th = UILabel(frame: CGRect(x: xLabel, y: rowHeight*5, width: labelWidth, height: labelHeight))
+        self.Label6th = UILabel(frame: CGRect(x: xLabel, y: rowHeight*6, width: labelWidth, height: labelHeight))
+        self.Label7th = UILabel(frame: CGRect(x: xLabel, y: rowHeight*7, width: labelWidth, height: labelHeight))
+        self.Label8th = UILabel(frame: CGRect(x: xLabel, y: rowHeight*8, width: labelWidth, height: labelHeight))
+        
+        self.Label1st.text = ""
+        self.Label2nd.text = ""
+        self.Label3rd.text = ""
+        self.Label4th.text = ""
+        self.Label5th.text = ""
+        self.Label6th.text = ""
+        self.Label7th.text = ""
+        self.Label8th.text = ""
+        
+        self.contentSize = CGSize(width: xLabel + self.Label1st.sizeThatFits(CGSize(width: 1000, height: 1000)).width, height: self.bounds.size.height)
+        
+        self.Label1st.isUserInteractionEnabled = true;
+        self.Label2nd.isUserInteractionEnabled = true
+        self.Label3rd.isUserInteractionEnabled = true
+        self.Label4th.isUserInteractionEnabled = true
+        self.Label5th.isUserInteractionEnabled = true
+        self.Label6th.isUserInteractionEnabled = true
+        self.Label7th.isUserInteractionEnabled = true
+        self.Label8th.isUserInteractionEnabled = true
+        
+        self.Label1st.tag = 1
+        self.Label2nd.tag = 2
+        self.Label3rd.tag = 3
+        self.Label4th.tag = 4
+        self.Label5th.tag = 5
+        self.Label6th.tag = 6
+        self.Label7th.tag = 7
+        self.Label8th.tag = 8
+        
+        self.addSubview(self.Label1st)
+        self.addSubview(self.Label2nd)
+        self.addSubview(self.Label3rd)
+        self.addSubview(self.Label4th)
+        self.addSubview(self.Label5th)
+        self.addSubview(self.Label6th)
+        self.addSubview(self.Label7th)
+        self.addSubview(self.Label8th)
+        
+        self.generateButton = UIButton()
+        self.generateButton.frame = CGRect(x: xLabel, y: rowHeight*9, width: labelWidth, height: rowHeight*2.85)
+        
+        self.generateButton.backgroundColor = UIColor(red: 243.0/255.0, green: 152.0/255.0, blue: 0, alpha: 1.0)
+        
+        self.generateButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        self.generateButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+        self.generateButton.setTitle("Push", for: UIControlState.normal)
+        
+        self.generateButton.addTarget(self, action: #selector(self.generateButtonClick), for: .touchDown)
+        
+    }
+    
+    func generateButtonClick()
+    {
+        
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        
+    }
+    
+
+
+}
