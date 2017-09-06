@@ -103,12 +103,131 @@ class WordPlotScrollView: UIScrollView {
     
     func generateButtonClick()
     {
+        let delegate = UIApplication.shared.delegate as! AppDelegate
         
+        var wordArray = Array<String>()
+        
+        for i in 0..<delegate.setOfWordArray.count{
+            if(delegate.setOfWordArray[i].Enable){
+                wordArray += delegate.setOfWordArray[i].wordSetArray
+            }
+        }
+        
+        self.shuffle(array: &wordArray)
+        
+        self.Label1st.text = ""
+        self.Label2nd.text = ""
+        self.Label3rd.text = ""
+        self.Label4th.text = ""
+        self.Label5th.text = ""
+        self.Label6th.text = ""
+        self.Label7th.text = ""
+        self.Label8th.text = ""
+        
+        if(wordArray.count > 0){
+            self.Label1st.text = wordArray[0]
+            self.Label2nd.text = wordArray[1]
+            self.Label3rd.text = wordArray[2]
+            self.Label4th.text = wordArray[3]
+            self.Label5th.text = wordArray[4]
+            self.Label6th.text = wordArray[5]
+            self.Label7th.text = wordArray[6]
+            self.Label8th.text = wordArray[7]
+            
+            self.Label1st.sizeToFit()
+            self.Label2nd.sizeToFit()
+            self.Label3rd.sizeToFit()
+            self.Label4th.sizeToFit()
+            self.Label5th.sizeToFit()
+            self.Label6th.sizeToFit()
+            self.Label7th.sizeToFit()
+            self.Label8th.sizeToFit()
+            
+            var maxWidth:CGFloat = 0
+            
+            var width:CGFloat = self.Label1st.bounds.origin.x + self.Label1st.bounds.size.width
+            if(width > maxWidth){
+                maxWidth = width
+            }
+            if(width > maxWidth){
+                maxWidth = width
+            }
+            width = self.Label2nd.bounds.origin.x + self.Label2nd.bounds.size.width
+            if(width > maxWidth){
+                maxWidth = width
+            }
+            width = self.Label3rd.bounds.origin.x + self.Label3rd.bounds.size.width
+            if(width > maxWidth){
+                maxWidth = width
+            }
+            width = self.Label4th.bounds.origin.x + self.Label4th.bounds.size.width
+            if(width > maxWidth){
+                maxWidth = width
+            }
+            width = self.Label5th.bounds.origin.x + self.Label5th.bounds.size.width
+            if(width > maxWidth){
+                maxWidth = width
+            }
+            width = self.Label6th.bounds.origin.x + self.Label6th.bounds.size.width
+            if(width > maxWidth){
+                maxWidth = width
+            }
+            width = self.Label7th.bounds.origin.x + self.Label7th.bounds.size.width
+            if(width > maxWidth){
+                maxWidth = width
+            }
+            width = self.Label8th.bounds.origin.x + self.Label8th.bounds.size.width
+            if(width > maxWidth){
+                maxWidth = width
+            }
+            
+            self.contentSize.width = maxWidth
+            
+            self.sizeToFit()
+        }
+    }
+    
+    func shuffle<T>( array: inout [T]) {
+        for j in ((0 + 1)...array.count - 1).reversed() {
+            let k = Int(arc4random_uniform(UInt32(j + 1))) // 0 <= k <= j
+            if k == j{
+                continue
+            }
+            swap(&array[k], &array[j])
+        }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         
+        let googleSearchViewController:GoogleSearchViewController = GoogleSearchViewController()
+        googleSearchViewController.googlesite = .JapaneseGoogle
+        
+        for touch:AnyObject in touches{
+            let t:UITouch = touch as! UITouch
+            if(t.view?.tag == self.Label1st.tag){
+                googleSearchViewController.SearchString = self.Label1st.text
+            }else if(t.view?.tag == self.Label2nd.tag){
+                googleSearchViewController.SearchString = self.Label2nd.text
+            }else if(t.view?.tag == self.Label3rd.tag){
+                googleSearchViewController.SearchString = self.Label3rd.text
+            }else if(t.view?.tag == self.Label4th.tag){
+                googleSearchViewController.SearchString = self.Label4th.text
+            }else if(t.view?.tag == self.Label5th.tag){
+                googleSearchViewController.SearchString = self.Label5th.text
+            }else if(t.view?.tag == self.Label6th.tag){
+                googleSearchViewController.SearchString = self.Label6th.text
+            }else if(t.view?.tag == self.Label7th.tag){
+                googleSearchViewController.SearchString = self.Label7th.text
+            }else if(t.view?.tag == self.Label8th.tag){
+                googleSearchViewController.SearchString = self.Label8th.text
+            }else{
+                return
+            }
+        }
+        googleSearchViewController.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
+        //self.superViewController!.presentViewController(ViewController, animated: true, completion: nil)
+        //この一行を適切に実装すること
     }
     
 
