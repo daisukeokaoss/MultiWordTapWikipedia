@@ -29,6 +29,7 @@
 		7E9041041F5C3A5000B59C6D /* WordCollectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9041031F5C3A5000B59C6D /* WordCollectionTableViewController.swift */; };
 		7E9041061F5EA93B00B59C6D /* WordPlotScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9041051F5EA93B00B59C6D /* WordPlotScrollView.swift */; };
 		7E9041081F5F9BF800B59C6D /* GoogleSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9041071F5F9BF800B59C6D /* GoogleSearchViewController.swift */; };
+		7E90410A1F5FD21900B59C6D /* WordPlotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9041091F5FD21900B59C6D /* WordPlotViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		7E9041031F5C3A5000B59C6D /* WordCollectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordCollectionTableViewController.swift; sourceTree = "<group>"; };
 		7E9041051F5EA93B00B59C6D /* WordPlotScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPlotScrollView.swift; sourceTree = "<group>"; };
 		7E9041071F5F9BF800B59C6D /* GoogleSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleSearchViewController.swift; sourceTree = "<group>"; };
+		7E9041091F5FD21900B59C6D /* WordPlotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPlotViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				7E9040F91F5C1E3F00B59C6D /* OneSetWordStorage.swift */,
 				7E9040F51F59736100B59C6D /* WordDownloadViewController.swift */,
 				7E9041051F5EA93B00B59C6D /* WordPlotScrollView.swift */,
+				7E9041091F5FD21900B59C6D /* WordPlotViewController.swift */,
 				7E9041071F5F9BF800B59C6D /* GoogleSearchViewController.swift */,
 				7E9040C21F59092900B59C6D /* Assets.xcassets */,
 				7E9040C41F59092900B59C6D /* LaunchScreen.storyboard */,
@@ -316,6 +319,7 @@
 				7E9040FF1F5C1F6400B59C6D /* BungakuJPDefaultWord.swift in Sources */,
 				7E9040EA1F5909B900B59C6D /* GetWordArrayFromWikipedia.swift in Sources */,
 				7E9041061F5EA93B00B59C6D /* WordPlotScrollView.swift in Sources */,
+				7E90410A1F5FD21900B59C6D /* WordPlotViewController.swift in Sources */,
 				7E9040BC1F59092900B59C6D /* AppDelegate.swift in Sources */,
 				7E9040F61F59736100B59C6D /* WordDownloadViewController.swift in Sources */,
 				7E9040EC1F5962ED00B59C6D /* CollectSpecifiedWordIteration.swift in Sources */,

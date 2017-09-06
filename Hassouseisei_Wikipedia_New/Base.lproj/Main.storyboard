@@ -140,7 +140,7 @@
         <!--Generate Word-->
         <scene sceneID="pbs-rA-jsY">
             <objects>
-                <viewController id="F5k-EN-ccT" sceneMemberID="viewController">
+                <viewController id="F5k-EN-ccT" customClass="WordPlotViewController" customModule="Hassouseisei_Wikipedia_New" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gI7-oI-q4B"/>
                         <viewControllerLayoutGuide type="bottom" id="8sc-DD-smf"/>
@@ -148,9 +148,23 @@
                     <view key="view" contentMode="scaleToFill" id="od7-hl-e2n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vpt-Jp-EdZ" customClass="WordPlotScrollView" customModule="Hassouseisei_Wikipedia_New" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vpt-Jp-EdZ" firstAttribute="top" secondItem="od7-hl-e2n" secondAttribute="top" id="9Nb-l1-Pnu"/>
+                            <constraint firstAttribute="trailing" secondItem="Vpt-Jp-EdZ" secondAttribute="trailing" id="VIg-BU-E3y"/>
+                            <constraint firstItem="8sc-DD-smf" firstAttribute="top" secondItem="Vpt-Jp-EdZ" secondAttribute="bottom" id="cSu-66-2Pe"/>
+                            <constraint firstItem="Vpt-Jp-EdZ" firstAttribute="leading" secondItem="od7-hl-e2n" secondAttribute="leading" id="iOc-ln-7iT"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Generate Word" image="09-chat-2.png" selectedImage="09-chat-2.png" id="ja0-mP-jgV"/>
+                    <connections>
+                        <outlet property="wordPlotScrollView" destination="Vpt-Jp-EdZ" id="Mlj-6I-JpS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wb0-Ot-S9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -17,6 +17,11 @@ class WordPlotScrollView: UIScrollView {
         // Drawing code
     }
     */
+    
+    internal var superViewController:UIViewController!
+    
+    
+    
     var generateButton:UIButton!
     var Label1st:UILabel!
     var Label2nd:UILabel!
