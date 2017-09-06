@@ -53,6 +53,7 @@ class GoogleSearchViewController: UIViewController {
         btn?.setTitle("戻る", for: UIControlState.highlighted)
         btn?.setTitle("戻る", for: UIControlState.disabled)
         btn?.addTarget(self, action: #selector(self.returnBack), for: UIControlEvents.touchDown)
+        self.view.addSubview(btn!)
         
     }
     

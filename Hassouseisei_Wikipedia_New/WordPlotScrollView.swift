@@ -253,8 +253,7 @@ class WordPlotScrollView: UIScrollView {
             }
         }
         googleSearchViewController.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
-        //self.superViewController!.presentViewController(ViewController, animated: true, completion: nil)
-        //この一行を適切に実装すること
+        self.superViewController.present(googleSearchViewController, animated: true, completion: nil)
     }
     
 
