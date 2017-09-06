@@ -15,6 +15,8 @@ class WordPlotViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.wordPlotScrollView.superViewController = self
+        
+        self.wordPlotScrollView.drawUserInterface()
     }
 
     override func didReceiveMemoryWarning() {

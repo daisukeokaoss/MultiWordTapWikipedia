@@ -38,7 +38,7 @@ class FullSetWordStorageAndSettingLoadSave: NSObject {
         
     }
     
-    func loadDefaultSetting()
+    func loadSetting()
     {
         let appdelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         

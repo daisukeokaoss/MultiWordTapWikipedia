@@ -8,6 +8,25 @@
 
 import UIKit
 
+
+extension Array {
+    
+    mutating func shuffle() {
+        for i in 0..<self.count {
+            let j = Int(arc4random_uniform(UInt32(self.indices.last!)))
+            if i != j {
+                swap(&self[i], &self[j])
+            }
+        }
+    }
+    
+    var shuffled: Array {
+        var copied = Array<Element>(self)
+        copied.shuffle()
+        return copied
+    }
+}
+
 class WordPlotScrollView: UIScrollView {
 
     /*
@@ -104,6 +123,8 @@ class WordPlotScrollView: UIScrollView {
         
         self.generateButton.addTarget(self, action: #selector(self.generateButtonClick), for: .touchDown)
         
+        self.addSubview(self.generateButton)
+        
     }
     
     func generateButtonClick()
@@ -118,7 +139,8 @@ class WordPlotScrollView: UIScrollView {
             }
         }
         
-        self.shuffle(array: &wordArray)
+        wordArray.shuffle()
+        wordArray = wordArray.shuffled
         
         self.Label1st.text = ""
         self.Label2nd.text = ""
@@ -192,7 +214,7 @@ class WordPlotScrollView: UIScrollView {
         }
     }
     
-    func shuffle<T>( array: inout [T]) {
+   /* func shuffle<T>( array: inout [T]) {
         for j in ((0 + 1)...array.count - 1).reversed() {
             let k = Int(arc4random_uniform(UInt32(j + 1))) // 0 <= k <= j
             if k == j{
@@ -200,7 +222,7 @@ class WordPlotScrollView: UIScrollView {
             }
             swap(&array[k], &array[j])
         }
-    }
+    }*/
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)

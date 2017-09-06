@@ -33,7 +33,7 @@ class WordCollectionTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         let appdelegate = UIApplication.shared.delegate as! AppDelegate
         if firstLoadFlag == 0{
-            appdelegate.setting.loadDefaultSetting()
+            appdelegate.setting.loadSetting()
             firstLoadFlag = 1
         }
         
