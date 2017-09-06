@@ -35,5 +35,11 @@ class WordPlotViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
+        if(UIDevice.current.userInterfaceIdiom == .pad){
+            self.wordPlotScrollView.drawUserInterface(height: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width)
+        }
+    }
 
 }

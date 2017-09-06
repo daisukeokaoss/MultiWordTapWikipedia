@@ -39,7 +39,7 @@ class WordPlotScrollView: UIScrollView {
     
     internal var superViewController:UIViewController!
     
-    
+    var DrawedFlag = false
     
     var generateButton:UIButton!
     var Label1st:UILabel!
@@ -55,6 +55,20 @@ class WordPlotScrollView: UIScrollView {
     internal func drawUserInterface( height:CGFloat = UIScreen.main.bounds.size.height, width:CGFloat = UIScreen.main.bounds.size.width)
     {
         print("Drowed")
+        
+        if self.DrawedFlag == false {
+            self.DrawedFlag = true
+        }else{
+            self.Label1st.removeFromSuperview()
+            self.Label2nd.removeFromSuperview()
+            self.Label3rd.removeFromSuperview()
+            self.Label4th.removeFromSuperview()
+            self.Label5th.removeFromSuperview()
+            self.Label6th.removeFromSuperview()
+            self.Label7th.removeFromSuperview()
+            self.Label8th.removeFromSuperview()
+            self.generateButton.removeFromSuperview()
+        }
         
         let rowHeight = height/13
         let xCoordinateOfStartingWord = width/24
