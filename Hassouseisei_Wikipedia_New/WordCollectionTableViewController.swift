@@ -31,11 +31,11 @@ class WordCollectionTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let appdelegate = UIApplication.shared.delegate as! AppDelegate
-        if firstLoadFlag == 0{
+       // let appdelegate = UIApplication.shared.delegate as! AppDelegate
+       /* if firstLoadFlag == 0{
             appdelegate.setting.loadSetting()
             firstLoadFlag = 1
-        }
+        }*/
         
         
         self.MyTableView?.reloadData()

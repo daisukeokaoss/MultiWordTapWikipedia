@@ -582,6 +582,7 @@
 				7E9040E21F59092900B59C6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E9040E31F59092900B59C6D /* Build configuration list for PBXNativeTarget "Hassouseisei_Wikipedia_NewTests" */ = {
 			isa = XCConfigurationList;
@@ -590,6 +591,7 @@
 				7E9040E51F59092900B59C6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E9040E61F59092900B59C6D /* Build configuration list for PBXNativeTarget "Hassouseisei_Wikipedia_NewUITests" */ = {
 			isa = XCConfigurationList;
@@ -598,6 +600,7 @@
 				7E9040E81F59092900B59C6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

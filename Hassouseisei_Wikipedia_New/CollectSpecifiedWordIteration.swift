@@ -40,9 +40,14 @@ class CollectSpecifiedWordIteration: NSObject {
         self.StopFlag = 1
     }
     
-    let internalRegexp: NSRegularExpression = try! NSRegularExpression( pattern: "[0-9]", options: NSRegularExpression.Options.caseInsensitive)
-    let internalRegexp2: NSRegularExpression = try! NSRegularExpression( pattern: "Wikipedia", options: NSRegularExpression.Options.caseInsensitive)
-    let internalRegexp3: NSRegularExpression = try! NSRegularExpression( pattern: "[０-９]", options: NSRegularExpression.Options.caseInsensitive)
+    let internalRegexp: NSRegularExpression = try! NSRegularExpression( pattern: "\\d", options: NSRegularExpression.Options.caseInsensitive)
+    let internalRegexp2: NSRegularExpression = try! NSRegularExpression( pattern: ".*Wikipedia.*", options: NSRegularExpression.Options.caseInsensitive)
+    let internalRegexp3: NSRegularExpression = try! NSRegularExpression( pattern: ".*[０-９].*", options: NSRegularExpression.Options.caseInsensitive)
+    let internalRegexp4: NSRegularExpression = try! NSRegularExpression( pattern: ".*ISO.*", options: NSRegularExpression.Options.caseInsensitive)
+    
+    
+    
+    let deleteWordRegExpression = ["[0-9]","Wikipedia","[０-９]"]
     
     
    /* func shuffle<T>( array: inout [T]) {
@@ -75,10 +80,13 @@ class CollectSpecifiedWordIteration: NSObject {
         var i = 0;
         while(i < wordArray.count){
             if (self.internalRegexp.firstMatch ( in: wordArray[i], options: [], range:NSMakeRange(0, wordArray[i].characters.count) ) != nil){
+                
                 wordArray.remove(at: i)
             }else if (self.internalRegexp2.firstMatch ( in: wordArray[i], options: [], range:NSMakeRange(0, wordArray[i].characters.count) ) != nil){
                 wordArray.remove(at: i)
             }else if (self.internalRegexp3.firstMatch ( in: wordArray[i], options: [], range:NSMakeRange(0, wordArray[i].characters.count) ) != nil){
+                wordArray.remove(at: i)
+            }else if (self.internalRegexp4.firstMatch ( in: wordArray[i], options: [], range:NSMakeRange(0, wordArray[i].characters.count) ) != nil){
                 wordArray.remove(at: i)
             }
             i += 1;
@@ -132,6 +140,8 @@ class CollectSpecifiedWordIteration: NSObject {
                 }else if (self.internalRegexp2.firstMatch ( in: wordArray[i], options: [], range:NSMakeRange(0, wordArray[i].characters.count) ) != nil){
                     wordArray.remove(at: i)
                 }else if (self.internalRegexp3.firstMatch ( in: wordArray[i], options: [], range:NSMakeRange(0, wordArray[i].characters.count) ) != nil){
+                    wordArray.remove(at: i)
+                }else if (self.internalRegexp4.firstMatch ( in: wordArray[i], options: [], range:NSMakeRange(0, wordArray[i].characters.count) ) != nil){
                     wordArray.remove(at: i)
                 }
                 i += 1;
