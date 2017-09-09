@@ -42,8 +42,8 @@ class CollectSpecifiedWordIteration: NSObject {
     
     let internalRegexp: NSRegularExpression = try! NSRegularExpression( pattern: "\\d", options: NSRegularExpression.Options.caseInsensitive)
     let internalRegexp2: NSRegularExpression = try! NSRegularExpression( pattern: ".*Wikipedia.*", options: NSRegularExpression.Options.caseInsensitive)
-    let internalRegexp3: NSRegularExpression = try! NSRegularExpression( pattern: ".*[０-９].*", options: NSRegularExpression.Options.caseInsensitive)
-    let internalRegexp4: NSRegularExpression = try! NSRegularExpression( pattern: ".*ISO.*", options: NSRegularExpression.Options.caseInsensitive)
+    //let internalRegexp3: NSRegularExpression = try! NSRegularExpression( pattern: ".*[０-９].*", options: NSRegularExpression.Options.caseInsensitive)
+    //let internalRegexp4: NSRegularExpression = try! NSRegularExpression( pattern: ".*ISO.*", options: NSRegularExpression.Options.caseInsensitive)
     
     
     
@@ -84,11 +84,11 @@ class CollectSpecifiedWordIteration: NSObject {
                 wordArray.remove(at: i)
             }else if (self.internalRegexp2.firstMatch ( in: wordArray[i], options: [], range:NSMakeRange(0, wordArray[i].characters.count) ) != nil){
                 wordArray.remove(at: i)
-            }else if (self.internalRegexp3.firstMatch ( in: wordArray[i], options: [], range:NSMakeRange(0, wordArray[i].characters.count) ) != nil){
+            }/*else if (self.internalRegexp3.firstMatch ( in: wordArray[i], options: [], range:NSMakeRange(0, wordArray[i].characters.count) ) != nil){
                 wordArray.remove(at: i)
             }else if (self.internalRegexp4.firstMatch ( in: wordArray[i], options: [], range:NSMakeRange(0, wordArray[i].characters.count) ) != nil){
                 wordArray.remove(at: i)
-            }
+            }*/
             i += 1;
         }
         
@@ -139,11 +139,11 @@ class CollectSpecifiedWordIteration: NSObject {
                     wordArray.remove(at: i)
                 }else if (self.internalRegexp2.firstMatch ( in: wordArray[i], options: [], range:NSMakeRange(0, wordArray[i].characters.count) ) != nil){
                     wordArray.remove(at: i)
-                }else if (self.internalRegexp3.firstMatch ( in: wordArray[i], options: [], range:NSMakeRange(0, wordArray[i].characters.count) ) != nil){
+                }/*else if (self.internalRegexp3.firstMatch ( in: wordArray[i], options: [], range:NSMakeRange(0, wordArray[i].characters.count) ) != nil){
                     wordArray.remove(at: i)
                 }else if (self.internalRegexp4.firstMatch ( in: wordArray[i], options: [], range:NSMakeRange(0, wordArray[i].characters.count) ) != nil){
                     wordArray.remove(at: i)
-                }
+                }*/
                 i += 1;
             }
             
