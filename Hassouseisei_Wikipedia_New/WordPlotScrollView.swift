@@ -32,14 +32,12 @@ class WordPlotScrollView: UIScrollView {
         let rowHeight = height/13
         let xCoordinateOfStartingWord = width/24
         
-        let labelHeight = CGFloat(30)
-        
         let xLabel = xCoordinateOfStartingWord
         
         let labelWidth = xCoordinateOfStartingWord*22
         
         self.gameStartButton = UIButton()
-        self.gameStartButton.frame = CGRect(x: xLabel, y: rowHeight*9, width: labelWidth, height: rowHeight*2.85)
+        self.gameStartButton.frame = CGRect(x: xLabel, y: rowHeight*4, width: labelWidth, height: rowHeight*2.85)
         
         self.gameStartButton.backgroundColor = UIColor(red: 243.0/255.0, green: 152.0/255.0, blue: 0, alpha: 1.0)
         
