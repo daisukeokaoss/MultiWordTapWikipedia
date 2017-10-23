@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70D9D7B31F9E0F4300FE4694 /* GameMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D9D7B21F9E0F4300FE4694 /* GameMainViewController.swift */; };
 		7E9040BC1F59092900B59C6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9040BB1F59092900B59C6D /* AppDelegate.swift */; };
 		7E9040C11F59092900B59C6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E9040BF1F59092900B59C6D /* Main.storyboard */; };
 		7E9040C31F59092900B59C6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E9040C21F59092900B59C6D /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		70D9D7B21F9E0F4300FE4694 /* GameMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMainViewController.swift; sourceTree = "<group>"; };
 		7E9040B81F59092900B59C6D /* Hassouseisei_Wikipedia_New.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hassouseisei_Wikipedia_New.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E9040BB1F59092900B59C6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E9040C01F59092900B59C6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				7E9040EB1F5962ED00B59C6D /* CollectSpecifiedWordIteration.swift */,
 				7E9040E91F5909B900B59C6D /* GetWordArrayFromWikipedia.swift */,
 				7E9040BF1F59092900B59C6D /* Main.storyboard */,
+				70D9D7B21F9E0F4300FE4694 /* GameMainViewController.swift */,
 				7E9041031F5C3A5000B59C6D /* WordCollectionTableViewController.swift */,
 				7E9041011F5C379000B59C6D /* OneWordTableViewCell.swift */,
 				7E9040F71F5C1E0400B59C6D /* FullSetWordStorageAndSettingLoadSave.swift */,
@@ -327,6 +330,7 @@
 				7E9041081F5F9BF800B59C6D /* GoogleSearchViewController.swift in Sources */,
 				7E9041001F5C1F6400B59C6D /* ChemicalJPDefaultWord.swift in Sources */,
 				7E9040F81F5C1E0400B59C6D /* FullSetWordStorageAndSettingLoadSave.swift in Sources */,
+				70D9D7B31F9E0F4300FE4694 /* GameMainViewController.swift in Sources */,
 				7E9040FA1F5C1E3F00B59C6D /* OneSetWordStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
