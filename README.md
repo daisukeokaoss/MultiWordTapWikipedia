@@ -1,6 +1,5 @@
-# HassouseiseiWikipedia
-「発想生成２」のソースコードです。アプリストアにアップロードしてあります。
+# MultiWordTapWikipedia
 
-https://itunes.apple.com/jp/app/%E7%99%BA%E6%83%B3%E7%94%9F%E6%88%90%EF%BC%92/id1070983679?mt=8
+単語が多数出てきて、大きな単語と同じ単語をタップすることによって、点数が入ります
 
 MITライセンスです。
