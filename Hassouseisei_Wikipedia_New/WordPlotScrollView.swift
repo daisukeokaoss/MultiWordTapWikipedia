@@ -54,7 +54,8 @@ class WordPlotScrollView: UIScrollView {
     
     func gameStartButtonClick()
     {
-
+        //let next = self.storyboard!.instantiateViewController(withIdentifier: "GameMainVC")
+        //self.present(next,animated: true, completion: nil)
     }
     
 

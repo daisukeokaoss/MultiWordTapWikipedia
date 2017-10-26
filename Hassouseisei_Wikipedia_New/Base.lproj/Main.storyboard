@@ -173,7 +173,7 @@
         <!--Game Main View Controller-->
         <scene sceneID="OJG-JC-RSb">
             <objects>
-                <viewController id="ZLM-7W-1oK" customClass="GameMainViewController" customModule="Hassouseisei_Wikipedia_New" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameMainVC" id="ZLM-7W-1oK" customClass="GameMainViewController" customModule="Hassouseisei_Wikipedia_New" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t87-mA-LbP"/>
                         <viewControllerLayoutGuide type="bottom" id="cvv-LR-e94"/>
