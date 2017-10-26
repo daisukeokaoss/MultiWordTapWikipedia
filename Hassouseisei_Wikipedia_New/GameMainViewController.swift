@@ -21,6 +21,11 @@ class GameMainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func drawUserInterface()
+    {
+        
+    }
+    
 
     /*
     // MARK: - Navigation
