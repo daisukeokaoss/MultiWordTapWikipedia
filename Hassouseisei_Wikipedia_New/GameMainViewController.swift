@@ -9,12 +9,19 @@
 import UIKit
 
 class GameMainViewController: UIViewController {
+    
+    var timer: Timer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
+        timer.fire()
     }
+    
+    var Stage:Int = 0
+    var Phase:Int = 0
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -24,6 +31,11 @@ class GameMainViewController: UIViewController {
     func drawUserInterface()
     {
         
+    }
+    
+    func update(tm: Timer) {
+        // do something
+        print("timer")
     }
     
 
