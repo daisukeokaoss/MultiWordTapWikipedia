@@ -9,5 +9,26 @@
 import UIKit
 
 class OneStage: NSObject {
+    
+    func UpdateFrame(selfView:UIView)
+    {
+        
+    }
+    
+    func InitializeStage(selfView:UIView)
+    {
+        
+    }
+    
+    func FinalizeDtage(selfView:UIView)
+    {
+        
+    }
+    
+    func RevokedWhenTouchEnded(_ touches: Set<UITouch>, with event: UIEvent?)
+        //タッチされた時に呼び出される関数
+    {
+        
+    }
 
 }

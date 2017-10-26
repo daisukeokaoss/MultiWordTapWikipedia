@@ -18,6 +18,8 @@ class GameMainViewController: UIViewController {
         // Do any additional setup after loading the view.
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
         timer.fire()
+        
+        
     }
     
     var Stage:Int = 0
