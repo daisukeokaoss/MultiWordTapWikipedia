@@ -9,5 +9,7 @@
 import UIKit
 
 class Stage1Object: OneStage {
+    
+    
 
 }

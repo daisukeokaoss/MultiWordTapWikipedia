@@ -11,6 +11,8 @@ import UIKit
 class GameMainViewController: UIViewController {
     
     var timer: Timer!
+    
+    var currentStage:OneStage!
 
     override func viewDidLoad() {
         super.viewDidLoad()
