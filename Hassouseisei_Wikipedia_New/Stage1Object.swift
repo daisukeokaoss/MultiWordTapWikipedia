@@ -40,9 +40,15 @@ class Stage1Object: OneStage {
         
     }
     
-    override func revokedWhenTouchEnded(_ touches: Set<UITouch>, with event: UIEvent?)
+    override func revokedWhenTouchEnded(_ touches: Set<UITouch>, with event: UIEvent?,parentViewController:UIViewController)
         //タッチされた時に呼び出される関数
     {
+        for touch:AnyObject in touches{
+            let t:UITouch = touch as! UITouch
+            if(t.view?.tag == self.dissmissLabel.tag){
+                parentViewController.dismiss(animated: true, completion: nil)
+            }
+        }
         
     }
 

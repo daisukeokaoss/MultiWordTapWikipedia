@@ -27,7 +27,7 @@ class OneStage: NSObject {
         
     }
     
-    func revokedWhenTouchEnded(_ touches: Set<UITouch>, with event: UIEvent?)
+    func revokedWhenTouchEnded(_ touches: Set<UITouch>, with event: UIEvent?,parentViewController:UIViewController)
         //タッチされた時に呼び出される関数
     {
         

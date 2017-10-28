@@ -44,6 +44,12 @@ class GameMainViewController: UIViewController {
         print("timer")
     }
     
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        currentStage.revokedWhenTouchEnded(touches, with: event, parentViewController: self)
+    }
+    
+    
 
     /*
     // MARK: - Navigation
