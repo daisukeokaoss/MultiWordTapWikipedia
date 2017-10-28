@@ -30,6 +30,7 @@ class Stage1Object: OneStage {
         self.dissmissLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
         self.dissmissLabel.font = UIFont(name: "HiraginoSans-W3", size: 80)
         self.dissmissLabel.text = "×"
+        self.dissmissLabel.tag = 0
         
         selfView.addSubview(self.dissmissLabel)
     }
