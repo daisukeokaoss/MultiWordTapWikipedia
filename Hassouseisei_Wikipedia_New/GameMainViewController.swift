@@ -18,12 +18,14 @@ class GameMainViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
-        timer.fire()
+
         
         currentStage = Stage1Object();
         
         currentStage.initializeStage(selfView: self.view)
+        
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
+        timer.fire()
     }
     
     var Stage:Int = 0
@@ -41,7 +43,7 @@ class GameMainViewController: UIViewController {
     
     func update(tm: Timer) {
         // do something
-        print("timer")
+        currentStage.updateFrame(selfView: self.view)
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
