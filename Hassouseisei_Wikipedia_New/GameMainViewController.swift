@@ -21,7 +21,9 @@ class GameMainViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
         timer.fire()
         
+        currentStage = Stage1Object();
         
+        currentStage.initializeStage(selfView: self.view)
     }
     
     var Stage:Int = 0

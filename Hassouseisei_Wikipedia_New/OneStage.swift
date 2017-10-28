@@ -10,22 +10,24 @@ import UIKit
 
 class OneStage: NSObject {
     
-    func UpdateFrame(selfView:UIView)
+    var phase:Int = 0
+    
+    func updateFrame(selfView:UIView)
     {
         
     }
     
-    func InitializeStage(selfView:UIView)
+    func initializeStage(selfView:UIView)
     {
         
     }
     
-    func FinalizeDtage(selfView:UIView)
+    func finalizeStage(selfView:UIView)
     {
         
     }
     
-    func RevokedWhenTouchEnded(_ touches: Set<UITouch>, with event: UIEvent?)
+    func revokedWhenTouchEnded(_ touches: Set<UITouch>, with event: UIEvent?)
         //タッチされた時に呼び出される関数
     {
         
